@@ -7,7 +7,6 @@ public class EulerProblem10 {
 
 	public static void main(String[] args)
 	{
-		
 		new EulerProblem10().run();
 	}
 	
@@ -33,8 +32,8 @@ public class EulerProblem10 {
 	{
 		if(i%2==0) return false; 
 
-		for(int j=3; j<=Math.sqrt(i); j+=2) // if a given number N isn't divisible by anything under or equal to sqrt(N) (not couting 1) it won't be divisible by anything above it since sqrt(N)*sqrt(N) = N.
-											// This means it's prime
+		for(int j=3; j<=Math.sqrt(i); j+=2) 	// if a given number N isn't divisible by anything under or equal to sqrt(N) (not couting 1) it won't be divisible by anything above it since sqrt(N)*sqrt(N) = N.
+							// This means it's prime
 		{
 			if(i%j==0){ return false; }
 		}
