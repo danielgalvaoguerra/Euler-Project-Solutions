@@ -1,5 +1,5 @@
 /*
- * Computes the sum of 100, 50-digit numbers, without using external libraries (uses addition "by hand" method")
+ * Computes the sum of 100, 50-digit numbers, without using external libraries (uses addition "by hand" method)
  * Author: Daniel Galvao Guerra
  * Date: June 21, 2016
  */
