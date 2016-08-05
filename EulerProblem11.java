@@ -1,5 +1,5 @@
 /*
- * What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
+ * What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20Ã—20 grid?
  * Author: Daniel Galvao Guerra
  * Date: May 19, 2013
  */
@@ -41,24 +41,23 @@ public class EulerProblem11 {
 		{
 			for(int col=0; col<20; col++)
 			{
-	
-			if(row < 17)
-			{ 
-				productR = series[col][row]*series[col][row+1]*series[col][row+2]*series[col][row+3]; 
-			}
-			if(col < 17)
-			{
-				if(row < 17){ productDR = series[col][row]*series[col+1][row+1]*series[col+2][row+2]*series[col+3][row+3]; }
-				if(row > 2){ productDL = series[col][row]*series[col+1][row-1]*series[col+2][row-2]*series[col+3][row-3]; }
+				if(row < 17)
+				{ 
+					productR = series[col][row]*series[col][row+1]*series[col][row+2]*series[col][row+3]; 
+				}
+				if(col < 17)
+				{
+					if(row < 17){ productDR = series[col][row]*series[col+1][row+1]*series[col+2][row+2]*series[col+3][row+3]; }
+					if(row > 2){ productDL = series[col][row]*series[col+1][row-1]*series[col+2][row-2]*series[col+3][row-3]; }
+					
+					productD = series[col][row]*series[col+1][row]*series[col+2][row]*series[col+3][row];
+				}
 				
-				productD = series[col][row]*series[col+1][row]*series[col+2][row]*series[col+3][row];
-			}
-			
-			// Updating the max product
-			if(productR>maxProduct){ maxProduct=productR; }
-			if(productD>maxProduct){ maxProduct=productD; }
-			if(productDR>maxProduct){ maxProduct=productDR; }
-			if(productDL>maxProduct){ maxProduct=productDL; }
+				// Updating the max product
+				if(productR>maxProduct){ maxProduct=productR; }
+				if(productD>maxProduct){ maxProduct=productD; }
+				if(productDR>maxProduct){ maxProduct=productDR; }
+				if(productDL>maxProduct){ maxProduct=productDL; }
 			}	
 		}
 		
